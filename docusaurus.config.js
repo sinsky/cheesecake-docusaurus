@@ -64,6 +64,9 @@ const config = {
         },
         items: [
           {
+            type: 'docsVersionDropdown',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
@@ -71,7 +74,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/sinsky/cheesecake-docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -125,6 +128,22 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        magicComments: [
+          // Remember to extend the default highlight class name as well!
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: { start: 'highlight-start', end: 'highlight-end' },
+          },
+          {
+            className: 'code-block-remove-line',
+            line: 'remove line',
+          },
+          {
+            className: 'code-block-append-line',
+            line: 'append line',
+          },
+        ]
       },
     }),
 };
